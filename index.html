@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Information App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gyan Vihar Education Academy Secondary School</h1>
+
+        <!-- Head Admin Login Section -->
+        <div class="form-section card">
+            <h2><i class="fas fa-user-shield"></i> Head Admin Login</h2>
+            <input type="text" id="headAdminLoginName" placeholder="Head Admin Name" />
+            <input type="password" id="headAdminLoginPassword" placeholder="Password" />
+            <button id="headAdminLoginBtn">Login</button>
+            <div id="headAdminLoginMessage" class="info-display"></div>
+        </div>
+
+        <!-- Teacher Admin Login Section -->
+        <div class="form-section card">
+            <h2><i class="fas fa-user-tie"></i> Teacher Admin Login</h2>
+            <input type="text" id="adminLoginName" placeholder="Admin Name" />
+            <input type="password" id="adminLoginPassword" placeholder="Password" />
+            <button id="adminLoginBtn">Login</button>
+            <div id="adminLoginMessage" class="info-display"></div>
+        </div>
+
+        <!-- Student Login Section -->
+        <div class="form-section card">
+            <h2><i class="fas fa-user-graduate"></i> Student Login</h2>
+            <input type="text" id="studentLoginId" placeholder="Student ID" />
+            <input type="password" id="studentLoginPassword" placeholder="Password" />
+            <button id="studentLoginBtn">Login</button>
+            <div id="studentLoginMessage" class="info-display"></div>
+        </div>
+
+        <!-- Teacher Admin Section -->
+        <div class="teacher-admin-section card" style="display: none;">
+            <h2><i class="fas fa-cogs"></i> Teacher Admin Controls</h2>
+            <h3>Manage Class Students</h3>
+            <ul id="studentsListAdmin"></ul>
+            <input type="text" id="studentName" placeholder="Student Name" />
+            <input type="text" id="studentInfo" placeholder="Student Info" />
+            <input type="text" id="parentInfo" placeholder="Parent Info" />
+            <button id="addStudentBtn">Add Student</button>
+            <button id="editStudentBtn">Edit Student</button>
+            <button id="deleteStudentBtn">Delete Student</button>
+            <div id="studentMessage" class="info-display"></div>
+
+            <h3>Assign Notices</h3>
+            <input type="text" id="noticeText" placeholder="Enter notice text" />
+            <button id="addNoticeBtn">Add Notice</button>
+            <button id="deleteNoticeBtn">Delete Notice</button>
+            <ul id="noticesListAdmin"></ul>
+            <div id="noticeMessage" class="info-display"></div>
+
+            <h3>Submit Attendance</h3>
+            <input type="date" id="attendanceDate" />
+            <input type="text" id="attendanceStudentName" placeholder="Student Name" />
+            <input type="text" id="attendanceStatus" placeholder="Status (Present/Absent)" />
+            <button id="submitAttendanceBtn">Submit Attendance</button>
+            <div id="attendanceMessage" class="info-display"></div>
+
+            <h3>Class Timetable</h3>
+            <input type="text" id="timetableInput" placeholder="Timetable (e.g., Math, Science)" />
+            <button id="setTimetableBtn">Set Timetable</button>
+            <div id="timetableMessage" class="info-display"></div>
+            <div id="timetableDisplay" class="info-display"></div>
+        </div>
+
+        <!-- Head Admin Section -->
+        <div class="head-admin-section card" style="display: none;">
+            <h2><i class="fas fa-user-shield"></i> Head Admin Controls</h2>
+            <h3>Manage Teacher Admins</h3>
+            <ul id="adminList"></ul>
+            <input type="text" id="newAdminName" placeholder="New Admin Name" />
+            <input type="password" id="newAdminPassword" placeholder="New Admin Password" />
+            <input type="text" id="assignClass" placeholder="Class to Assign" />
+            <button id="addAdminBtn">Add Teacher Admin</button>
+            <div id="adminMessage" class="info-display"></div>
+        </div>
+
+        <!-- Student Information -->
+        <div class="info-section card" style="display: none;">
+            <h2><i class="fas fa-info-circle"></i> Your Information</h2>
+            <div id="studentInfoDisplay" class="info-display"></div>
+        </div>
+
+        <!-- Notices Section -->
+        <div class="notices-section card" style="display: none;">
+            <h2><i class="fas fa-bullhorn"></i> Notices</h2>
+            <button id="getNoticesBtn">View Notices</button>
+            <ul id="noticesList"></ul>
+        </div>
+
+        <!-- Attendance Section -->
+        <div class="attendance-section card" style="display: none;">
+            <h2><i class="fas fa-calendar-check"></i> Attendance Report</h2>
+            <input type="date" id="attendanceReportDate" />
+            <button id="getAttendanceBtn">Get Attendance</button>
+            <div id="attendanceReport" class="info-display"></div>
+        </div>
+
+        <!-- Timetable Section -->
+        <div class="timetable-section card" style="display: none;">
+            <h2><i class="fas fa-calendar-alt"></i> Timetable</h2>
+            <button id="getTimetableBtn">View Timetable</button>
+            <div id="timetable" class="info-display"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
